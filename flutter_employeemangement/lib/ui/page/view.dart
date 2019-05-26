@@ -46,23 +46,23 @@ class ViewListState extends State {
           )*/
 
           child: Padding(
-            padding: const EdgeInsets.all(20.0),
+            padding: const EdgeInsets.all(12.0),
             child:Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(this.employees[position].name,
                 style: TextStyle(
-                  fontSize: 26,
+                  fontSize: 20,
                   color: Colors.black87,
                 ),),
               Text(this.employees[position].address,
                 style: TextStyle(
-                  fontSize: 24,
+                  fontSize: 18,
                   color: Colors.black87,
                 ),),
               Text(this.employees[position].salary.toString(),
                 style: TextStyle(
-                  fontSize: 24,
+                  fontSize: 18,
                   color: Colors.black87,
                 ),),
             ],

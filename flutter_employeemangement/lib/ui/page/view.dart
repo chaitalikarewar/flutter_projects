@@ -30,18 +30,43 @@ class ViewListState extends State {
         return Card(
           color: Colors.white,
           elevation: 2.0,
-          child: ListTile(
+
+
+          /*child: ListTile(
               leading: Icon(Icons.account_circle),
-            /*leading: CircleAvatar(
+            *//*leading: CircleAvatar(
               child:Text(this.employees[position].id.toString()),
-            ),*/
+            ),*//*
             title: Text(this.employees[position].name),
             subtitle:Text(this.employees[position].address),
             onTap: () {
               debugPrint("Tapped on " + this.employees[position].id.toString());
              // navigateToDetail(this.employees[position]);
             },
-          ),
+          )*/
+
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child:Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(this.employees[position].name,
+                style: TextStyle(
+                  fontSize: 26,
+                  color: Colors.black87,
+                ),),
+              Text(this.employees[position].address,
+                style: TextStyle(
+                  fontSize: 24,
+                  color: Colors.black87,
+                ),),
+              Text(this.employees[position].salary.toString(),
+                style: TextStyle(
+                  fontSize: 24,
+                  color: Colors.black87,
+                ),),
+            ],
+          )),
         );
       },
     );
